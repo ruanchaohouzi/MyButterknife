@@ -52,6 +52,20 @@ public class AnnotationProcessor  extends AbstractProcessor {
     }
 
     /**
+     * 添加需要支持的注解
+     * @return
+     */
+    @Override
+    public Set<String> getSupportedAnnotationTypes() {
+        Set<String> annotationTypes = new LinkedHashSet<String>();
+        //添加需要支持的注解
+        annotationTypes.add(BindView.class.getCanonicalName());
+        annotationTypes.add(OnClick.class.getCanonicalName());
+
+        return annotationTypes;
+    }
+
+    /**
      * 处理器的核心方法
      * 用于处理注解，生成Java文件
      * @param set

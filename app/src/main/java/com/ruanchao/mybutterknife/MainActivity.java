@@ -1,5 +1,7 @@
 package com.ruanchao.mybutterknife;
 
+import android.app.Activity;
+import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         MyButterKnife.bind(this);
-
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,4 +32,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
